@@ -6,9 +6,6 @@ use std::io::{prelude::*, BufReader};
 use std::net::TcpStream;
 use std::process::{Command, Stdio, Child};
 
-
-// use crate::tor_process_launcher::launch_tor_with_config;
-
 #[derive(Debug, Deserialize, Serialize)]
 pub struct HiddenServiceConfig {
     port:u16,
