@@ -34,7 +34,7 @@ fn main() {
     let cfg_path= Path::new("config.yaml");
     if !exists(cfg_path).unwrap(){
         println!("Yaml Config doesn't exist so we will generate one for you...");
-        let mut new_file = File::create_new("config.yaml").unwrap();
+        let mut new_file = File::create("config.yaml").unwrap();
         new_file.write(DEFAULT_CONFIG).unwrap();
         println!("Run this script again when you've filled out your config file...")
     } else {
